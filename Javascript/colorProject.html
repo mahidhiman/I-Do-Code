@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color project</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		p{
+			padding: 20%;
+			margin: 0 auto;
+			font-size: 4em;
+		}
+	</style>
+</head>
+<body onclick="myf()">
+<center>
+<p>Click anyware</p>
+</center>
+<script type="text/javascript">
+	const body = document.querySelector('body');
+	const p = document.querySelector('p');
+
+	function myf(){
+	let s = 'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')';
+	p.innerHtml = s;
+	body.style.backgroundColor = s;
+	console.clear();
+	console.log(s);
+}
+body.click();
+
+</script>
+</body>
+</html>
